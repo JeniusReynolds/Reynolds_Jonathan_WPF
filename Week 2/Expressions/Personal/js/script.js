@@ -10,10 +10,6 @@ const Twenty = .20;
 const TwentyFive = .25;
 var TotalDinnerCost;
 var DesiredTip;
-var Tip15 = TotalDinnerCost * Fifteen;
-var Tip20 = TotalDinnerCost * Twenty;
-var Tip25 = TotalDinnerCost * TwentyFive;
-var TipUser = TotalDinnerCost * (DesiredTip/100);
 var Welcome = "Hello, Welcome to the Restaurant Tip Calculator";
 var TotalBill;
 
@@ -22,5 +18,11 @@ var TotalBill;
 alert(Welcome);
 DesiredTip = prompt("Please enter the desired tip percentage that you would like to tip the waiter/waitress. No percentage sign needed. Thanks");
 TotalDinnerCost = prompt("How much is the total for your meal?");
+
+//Calculations needed after initial prompts
+var Tip15 = TotalDinnerCost * Fifteen;
+var Tip20 = TotalDinnerCost * Twenty;
+var Tip25 = TotalDinnerCost * TwentyFive;
+var TipUser = TotalDinnerCost * (DesiredTip/100);
 
 console.log(TotalDinnerCost,DesiredTip, Tip15, Tip20,Tip25,TipUser);
