@@ -1,15 +1,8 @@
-var string1 = "Hello";
-var string2 = "Goodbye";
+var FirstNumber = 15;
+var SecondNumber = 10;
+var Answer = 15/10;
 
-alert(string1);
-alert(string2);
+alert(15/10);
 
-string2 = string1;
-
-alert(string1);
-alert(string2);
-
-string1 = "Now for something different";
-
-alert(string1);
-alert(string2);
+answer = FirstNumber/SecondNumber;
+alert(answer);
