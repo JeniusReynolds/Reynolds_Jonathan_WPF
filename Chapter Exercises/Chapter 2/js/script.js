@@ -1,5 +1,15 @@
-var myFirstVariable = "Hello";
-alert(myFirstVariable)
+var string1 = "Hello";
+var string2 = "Goodbye";
 
-var myFirstVariable = 54321;
-alert(myFirstVariable)
+alert(string1);
+alert(string2);
+
+string2 = string1;
+
+alert(string1);
+alert(string2);
+
+string1 = "Now for something different";
+
+alert(string1);
+alert(string2);
