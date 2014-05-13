@@ -20,9 +20,14 @@ DesiredTip = prompt("Please enter the desired tip percentage that you would like
 TotalDinnerCost = prompt("How much is the total for your meal?");
 
 //Calculations needed after initial prompts
+
 var Tip15 = TotalDinnerCost * Fifteen;
 var Tip20 = TotalDinnerCost * Twenty;
 var Tip25 = TotalDinnerCost * TwentyFive;
 var TipUser = TotalDinnerCost * (DesiredTip/100);
 
-console.log(TotalDinnerCost,DesiredTip, Tip15, Tip20,Tip25,TipUser);
+//Creating a an Array to calculate the Final Bill for each Tip Amount. The final bill calculation is TotalDinnerCost + The Various Tip Amounts
+
+TotalBill = [TipUser+TotalDinnerCost , Tip15+TotalDinnerCost , Tip20+TotalDinnerCost , Tip25+TotalDinnerCost];
+
+console.log(TotalBill);
