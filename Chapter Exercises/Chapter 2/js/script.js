@@ -1,8 +1,8 @@
-var FirstNumber = 15;
-var SecondNumber = 10;
-var Answer = 15/10;
+//Equation is C = 5/9 (F - 32)
 
-alert(15/10);
+var degFahren = prompt("Enter the degrees in Fahrenheit",50);
+var degCent;
 
-answer = FirstNumber/SecondNumber;
-alert(answer);
+degCent = 5/9 * (degFahren - 32);
+
+alert(degCent);
