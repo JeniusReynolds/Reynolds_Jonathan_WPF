@@ -28,6 +28,6 @@ var TipUser = TotalDinnerCost * (DesiredTip/100);
 
 //Creating a an Array to calculate the Final Bill for each Tip Amount. The final bill calculation is TotalDinnerCost + The Various Tip Amounts
 
-TotalBill = [TipUser+TotalDinnerCost , Tip15+TotalDinnerCost , Tip20+TotalDinnerCost , Tip25+TotalDinnerCost];
+TotalBill = [TipUser+parseFloat(TotalDinnerCost) , Tip15+parseFloat(TotalDinnerCost) , Tip20+parseFloat(TotalDinnerCost) , Tip25+parseFloat(TotalDinnerCost)];
 
 console.log(TotalBill);
