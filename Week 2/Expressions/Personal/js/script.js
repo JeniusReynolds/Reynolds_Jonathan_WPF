@@ -32,7 +32,7 @@ TotalBill = [TipUser+parseFloat(TotalDinnerCost) , Tip15+parseFloat(TotalDinnerC
 
 // This will be the final promp as well as console log for the calculator.
 
-alert("Your desired tip percentage is "+DesiredTip+"%. Your total meal cost is $"+TotalDinnerCost+". If you decide to tip this amount your total bill will be $"+TotalBill[0]+". If you instead desire to tip 15%, 20%, or 25% the tip amounts would be $"+Tip15+", $"+Tip20+", or $"+ Tip25+". Which would respectfully make your total bill costs $"+TotalBill[1]+", $"+TotalBill[2]+", or $"+ TotalBill[3]+".");
+alert("Your desired tip percentage is "+DesiredTip+"%. Your total meal cost is $"+TotalDinnerCost+". This makes your tip amount $"+TipUser+". If you decide to tip this amount your total bill will be $"+TotalBill[0]+". If you instead desire to tip 15%, 20%, or 25% the tip amounts would be $"+Tip15+", $"+Tip20+", or $"+ Tip25+". Which would respectfully make your total bill costs $"+TotalBill[1]+", $"+TotalBill[2]+", or $"+ TotalBill[3]+".");
 
 
-console.log("Your desired tip percentage is "+DesiredTip+"%. Your total meal cost is $"+TotalDinnerCost+". If you decide to tip this amount your total bill will be $"+TotalBill[0]+". If you instead desire to tip 15%, 20%, or 25% the tip amounts would be $"+Tip15+", $"+Tip20+", or $"+ Tip25+". Which would respectfully make your total bill costs $"+TotalBill[1]+", $"+TotalBill[2]+", or $"+ TotalBill[3]+".");
+console.log("Your desired tip percentage is "+DesiredTip+"%. Your total meal cost is $"+TotalDinnerCost+". This makes your tip amount $"+TipUser+". If you decide to tip this amount your total bill will be $"+TotalBill[0]+". If you instead desire to tip 15%, 20%, or 25% the tip amounts would be $"+Tip15+", $"+Tip20+", or $"+ Tip25+". Which would respectfully make your total bill costs $"+TotalBill[1]+", $"+TotalBill[2]+", or $"+ TotalBill[3]+".");
