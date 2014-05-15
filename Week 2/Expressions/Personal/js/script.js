@@ -28,9 +28,13 @@ totalMealCost = prompt("How much is the total for your meal? No Dollar Sign Need
 //Calculations needed after initial prompts
 
 var tip15 = totalMealCost * fifteen;
+tip15 = +tip15.toFixed(2);
 var tip20 = totalMealCost * twenty;
+tip20 = +tip20.toFixed(2);
 var tip25 = totalMealCost * twentyFive;
+tip25 = +tip25.toFixed(2);
 var tipUser = totalMealCost * (desiredTip/100);
+tipUser = +tipUser.toFixed(2);
 
 //Creating a an Array to calculate the Final Bill for each Tip Amount. The final bill calculation is totalMealCost + The Various Tip Amounts
 
