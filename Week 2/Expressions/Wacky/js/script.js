@@ -29,7 +29,7 @@ var heightInches;
 var heightSquared;
 var bmiCalc1;
 var bmiFinal;
-const welcome = "Hello, Welcome to the BMI Editor";
+const welcome = "Hello, Welcome to the BMI Calculator";
 
 //Adding Initial Alerts and Prompts
 alert(welcome);
@@ -43,7 +43,9 @@ heightSquared = heightInInches * heightInInches;
 bmiCalc1 = weight / heightSquared;
 bmiFinal = bmiCalc1 * ConversionFactor;
 
-console.log(bmiFinal)
+//Final prompt and Log
+console.log("Your estimated BMI(Body Mass Index) based upon the information you gave us is " +bmiFinal+". BMI < 18 = Underweight. 18 < BMI < 18.5 = Thin For Height. 18.6 - 24.9 = Healthy Weight. 25 - 29.9 = Over-Weight. BMI > 30 = Obesity")
 
+alert("Your estimated BMI(Body Mass Index) based upon the information you gave us is " +bmiFinal+". BMI < 18 = Underweight. 18 < BMI < 18.5 = Thin For Height. 18.6 - 24.9 = Healthy Weight. 25 - 29.9 = Over-Weight. BMI > 30 = Obesity")
 
 
