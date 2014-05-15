@@ -78,7 +78,7 @@ bmiFinalP20 = bmiCalcP20 * conversionFactor;
 bmiFinalP20 = +bmiFinalP20.toFixed(2)
 bmiFinalP30 = bmiCalcP30 * conversionFactor;
 bmiFinalP30 = +bmiFinalP30.toFixed(2)
-alert("The effects of gaining 10, 20, or 30 pounds are as follows: "+bmiFinalP10+", "+bmiFinalP20+", "+bmiFinalP30+". The effects of losing the same weight would be: "+bmiFinalM10+", "+bmiFinalM20+", "+bmiFinalM30+". Thanks for using.")
 
-console.log("The effects of gaining 10, 20, or 30 pounds are as follows: "+bmiFinalP10+", "+bmiFinalP20+", "+bmiFinalP30+". The effects of losing the same weight would be: "+bmiFinalM10+", "+bmiFinalM20+", "+bmiFinalM30+". Thanks for using.")
+alert("The effects to your BMI if you gain 10, 20, or 30 pounds are as follows: "+bmiFinalP10+", "+bmiFinalP20+", "+bmiFinalP30+". The effects of losing the same weight to your BMI would be: "+bmiFinalM10+", "+bmiFinalM20+", "+bmiFinalM30+". Thanks for using.")
 
+console.log("The effects to your BMI if you gain 10, 20, or 30 pounds are as follows: "+bmiFinalP10+", "+bmiFinalP20+", "+bmiFinalP30+". The effects of losing the same weight to your BMI would be: "+bmiFinalM10+", "+bmiFinalM20+", "+bmiFinalM30+". Thanks for using.")

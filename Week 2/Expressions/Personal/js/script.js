@@ -39,6 +39,10 @@ tipUser = +tipUser.toFixed(2);
 //Creating a an Array to calculate the Final Bill for each Tip Amount. The final bill calculation is totalMealCost + The Various Tip Amounts
 
 totalBill = [tipUser+parseFloat(totalMealCost) , tip15+parseFloat(totalMealCost) , tip20+parseFloat(totalMealCost) , tip25+parseFloat(totalMealCost)];
+totalBill[0] = +totalBill[0].toFixed(2);
+totalBill[1] = +totalBill[1].toFixed(2);
+totalBill[2] = +totalBill[2].toFixed(2);
+totalBill[3] = +totalBill[3].toFixed(2);
 
 // This will be the final promp as well as console log for the calculator.
 
