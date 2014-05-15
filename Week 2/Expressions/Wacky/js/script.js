@@ -6,13 +6,15 @@
 For My Wacky Calculator, I decided to do a calculator that isn't necessarily "Wacky" in nature.
 I chose to do something that would require quite a few expressions as well as some of the other functions we have learned thus far.
 I am choosing to create a BMI[Body Mass Index] calculator.
-I visited www.wikihow.com to find the calculation for Body Mass Index. The Steps are:
-Obtain Weight
-Obtain Height in Inches -- For this step I will get height in Feet and Inches from the user then convert the values to inches for calculations
-Square the height in inches
-Divide Weight by the Squared number
-Multiply that answer by a conversion factor of 703. That number is the BMI
-Once BMI is obtained I will create an alert informing the user of BMI as well as what the ranges should be.
+I visited www.wikihow.com to find the calculation for Body Mass Index. 
+
+The Steps are:
+1. Obtain Weight in Pounds
+2. Obtain Height in Inches -- For this step I will get height in Feet and Inches from the user then convert the values to inches for calculations
+3. Square the height in inches
+4. Divide Weight by the Squared number
+5. Multiply that answer by a conversion factor of 703. That number is the BMI
+6. Once BMI is obtained I will create an alert informing the user of BMI as well as what the ranges should be.
 */
 
 
@@ -27,4 +29,21 @@ var heightInches;
 var heightSquared;
 var bmiCalc1;
 var bmiFinal;
+const welcome = "Hello, Welcome to the BMI Editor";
+
+//Adding Initial Alerts and Prompts
+alert(welcome);
+weight = prompt("To begin the calculation we would like to begin with your weight in pounds. Please enter your weight:");
+heightFeet = Number(prompt("Next, we will need to know how tall you are. Please enter your height(Feet Only). We will get any inches in the next step."));
+heightInches = Number(prompt("Please provide the number of inches to your height that is in addition to your feet. If there aren't any 0 is a valid answer",0));
+
+//Adding some of the calculations
+heightInInches = (heightFeet *12) + heightInches;
+heightSquared = heightInInches * heightInInches;
+bmiCalc1 = weight / heightSquared;
+bmiFinal = bmiCalc1 * ConversionFactor;
+
+console.log(bmiFinal)
+
+
 
