@@ -14,7 +14,8 @@
 
 //Creating Initial Variables and Prompts
 
-const welcome = "Welcome to the Salary Calculator";
+const name = prompt("What is your name?")
+const welcome = "Welcome "+name+" to the Salary Calculator";
 const biWeeklyPayPeriods = 26;
 const weeklyPayPeriods = 52;
 const monthlyPayPeriods = 12;
@@ -49,23 +50,29 @@ alert("Your gross annual salary is $"+userSalary+". This means your base rate is
 
 //This portion is added for complexity
 
+//Asking user for desired raise that the would like
 desiredRaise = Number(prompt("If you were to ask for a raise based upon your current salary, what percentage increase would you like to see your salary go to?[No percentage sign is needed]"))
 
-//Calculations
+//Calculating the new salary wage based upon the user's raise peferance
 userSalaryR = userSalary * (1 + (desiredRaise/100))
 
+//Calculating the new hourly wage
 hourlyRateR = userSalaryR / annualHours;
 hourlyRateR = +hourlyRateR.toFixed(2);
 
+//Calculating the new bi-weekly salary wage
 biWeeklyRateR = userSalaryR / biWeeklyPayPeriods;
 biWeeklyRateR = +biWeeklyRateR.toFixed(2);
 
+//Calculating the new weekly salary wage
 weeklyRateR = userSalaryR / weeklyPayPeriods;
 weeklyRateR = +weeklyRateR.toFixed(2);
 
+//Calculating the new monthly salary wage
 monthlyRateR = userSalaryR /monthlyPayPeriods;
 monthlyRateR = +monthlyRateR.toFixed(2);
 
+//Calculating the new semi-monthly salary wage
 semiMonthlyRateR = userSalaryR/semiMonthlyPayPeriods;
 semiMonthlyRateR = +semiMonthlyRateR.toFixed(2);
 
