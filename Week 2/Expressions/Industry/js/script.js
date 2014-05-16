@@ -12,3 +12,38 @@
  *a merrit increase.
  */
 
+//Creating Initial Variables and Prompts
+
+const welcome = "Welcome to the Salary Calculator";
+const biWeeklyPayPeriods = 26;
+const weeklyPayPeriods = 52;
+const monthlyPayPeriods = 12;
+const semiMonthlyPayPeriods = 24;
+const annualHours = 2080;
+alert(welcome);
+userSalary=Number(prompt("Please enter your gross annual salary. No dollar sign is needed"));
+
+
+//Creating the calculations needed
+
+hourlyRate = userSalary / annualHours;
+hourlyRate = +hourlyRate.toFixed(2);
+
+biWeeklyRate = userSalary / biWeeklyPayPeriods;
+biWeeklyRate = +biWeeklyRate.toFixed(2);
+
+weeklyRate = userSalary / weeklyPayPeriods;
+weeklyRate = +weeklyRate.toFixed(2);
+
+monthlyRate = userSalary/monthlyPayPeriods;
+monthlyRate = +monthlyRate.toFixed(2);
+
+semiMonthlyRate = userSalary/semiMonthlyPayPeriods;
+semiMonthlyRate = +semiMonthlyRate.toFixed(2);
+
+//Creating the Final Alert and Console Log
+console.log("Your annual salary is $"+userSalary+" which means your base rate is $"+hourlyRate+" an hour. Your monthly salary is $"+monthlyRate+" a month. Your semi-monthly rate is $"+semiMonthlyRate+". Your weekly and bi-weekly rates are $"+weeklyRate+ " and $"+biWeeklyRate+".")
+
+alert("Your annual salary is $"+userSalary+" which means your base rate is $"+hourlyRate+" an hour. Your monthly salary is $"+monthlyRate+" a month. Your semi-monthly rate is $"+semiMonthlyRate+". Your weekly and bi-weekly rates are $"+weeklyRate+ " and $"+biWeeklyRate+".")
+
+

@@ -6,7 +6,7 @@
 For My Wacky Calculator, I decided to do a calculator that isn't necessarily "Wacky" in nature.
 I chose to do something that would require quite a few expressions as well as some of the other functions we have learned thus far.
 I am choosing to create a BMI[Body Mass Index] calculator.
-I visited www.wikihow.com to find the calculation for Body Mass Index. 
+I visited www.wikihow.com/Calculate-Your-Body-Mass-Index-(BMI) to find the calculation for Body Mass Index. 
 
 The Steps are:
 1. Obtain Weight in Pounds
