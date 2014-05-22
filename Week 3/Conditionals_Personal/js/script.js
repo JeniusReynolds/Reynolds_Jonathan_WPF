@@ -12,4 +12,21 @@ const myShoes = 71;
 name = prompt("Hello welcome to the Shoe Comparison Exercise. Can you please provide me with your first name?");
 amountOfShoes = Number(prompt("Thanks "+name+". Now tell me, how many pairs of shoes do you own?"));
 
-//Adding the conditionals now
+//Adding the conditionals
+
+nextStep = (amountOfShoes <= myShoes) ? 1:2
+
+if(nextStep ===1){
+	if(amountOfShoes === myShoes){
+		alert("You have the same amount of shoes as me!")
+	}else{
+		difference = myShoes - amountOfShoes;
+		alert("Hey "+name+", you have "+difference+" less shoes than me.")
+		console.log("Hey "+name+", you have "+difference+" less shoes than me.")
+	}
+}else{
+	difference = amountOfShoes - myShoes
+	alert("Hey "+name+", you have "+difference+" more shoes than I do.")
+	console.log("Hey "+name+", you have "+difference+" more shoes than I do.")
+}
+
