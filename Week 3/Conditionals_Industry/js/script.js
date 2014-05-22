@@ -21,20 +21,24 @@ taxableAmount= Number(prompt("Please enter your total annual gross income for th
 if(taxableAmount < 15000){
 	
 	alert("You have not made enough to be taxed by the Federal School System")
+	console.log("You have not made enough to be taxed by the Federal School System")
 	
-}else if(taxableAmount >= 15000, taxableAmount < 60000){
+}else if(taxableAmount >= 15000 && taxableAmount < 60000){
 	
 	taxCharged = taxableAmount * .03
 	alert("You will be charged a total of $"+taxCharged+" in Federal School Tax.")
+	console.log("You will be charged a total of $"+taxCharged+" in Federal School Tax.")
 	
-}else if(taxableAmount >= 60000, taxableAmount < 100000){
+}else if(taxableAmount >= 60000 && taxableAmount < 100000){
 	
 	taxCharged = taxableAmount * .08
 	alert("You will be charged a total of $"+taxCharged+" in Federal School Tax.")
+	console.log("You will be charged a total of $"+taxCharged+" in Federal School Tax.")
 	
 }else {
 	taxCharged = taxableAmount * .27
 	alert("You will be charged a total of $"+taxCharged+" in Federal School Tax.")
+	console.log("You will be charged a total of $"+taxCharged+" in Federal School Tax.")
 }
 
 
