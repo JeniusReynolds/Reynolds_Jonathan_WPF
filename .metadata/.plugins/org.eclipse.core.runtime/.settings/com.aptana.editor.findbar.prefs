@@ -1,0 +1,3 @@
+FIND_BAR_DECORATOR_FIND_ENTRIES=\#\n\#Thu May 15 15\:43\:35 EDT 2014\n8\=Welcome\n7\=Tip\n6\=Tip15\n5\=Tip20\n4\=Tip25\n3\=TipUser\n2\=TitalBill\n1\=TotalBill\n0\=ConversionFactor\n
+FIND_BAR_DECORATOR_REPLACE_ENTRIES=\#\n\#Thu May 15 15\:43\:35 EDT 2014\n9\=totalMealCost\n8\=desiredTip\n7\=welcome\n6\=tip\n5\=tip15\n4\=tip20\n12\=parseFloat\n3\=tip25\n11\=fifteen\n2\=tipUser\n10\=twenty\n1\=totalBill\n0\=conversionFactor\n
+eclipse.preferences.version=1
