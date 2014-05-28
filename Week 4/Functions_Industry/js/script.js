@@ -9,34 +9,35 @@
 
 //The first step is for me to figure out and define what my re-usable code is going to be.
 
-function calcHoursValue (hrs,rate)
-{//dollar value calculation. Will be used last.
-	var dollarValue = hrs * rate)
+function calcHoursValue (hours,rate)
+{//Will calculate the dollar value of the accruals
+
+	var dollarValue = hours * rate
 	return dollarValue
 }
 
 function calcAnnualHours (pRate, hoursPWeek)
 {//will calculate the accrual hours earned for the year
-	var totalAnnualWorkHours = hoursPWeek * weeksInAYear
-	var annualHours = pRate * totalAnnualWorkHours
+	var totalAnnualWorkHours = hoursPWeek * weeksInAYear;
+	var annualHours = pRate * totalAnnualWorkHours;
 	return annualHours
 }
 
 function calcAnnualAccrualRate (days, hoursPWeek)
 {//Will calculate the accrual rate based on policy
-	var weeksInAYear = 52
-	var workDaysInWeek = 5
-	var totalAnnualWorkHours = hoursPWeek * weeksInAYear
-	var hoursPerDay = hoursPWeek / workDaysInWeek
-	var totalAccrualHours = days * hoursPerDay
-	var finalRate = totalAccrualHours / totalAnnualHours
+	var weeksInAYear = 52;
+	var workDaysInWeek = 5;
+	var totalAnnualWorkHours = hoursPWeek * weeksInAYear;
+	var hoursPerDay = hoursPWeek / workDaysInWeek;
+	var totalAccrualHours = days * hoursPerDay;
+	var finalRate = totalAccrualHours / totalAnnualWorkHours;
 	return finalRate
 }
 
-function calcHoursToDays (totalHours, hoursPWeek)
-{
-	var hoursPerDay = hoursPWeek / workDaysInWeek
-	var amountOfDays = totalHours / hoursPerDay
+function calcAccrHoursPerWeek(rate,hoursPWeek)
+{//Will calculate how many hours of PTO are earned per week.
+	var accrHoursPerWeek = rate * hoursPWeek;
+	return accrHoursPerWeek
 }
 
 
@@ -49,10 +50,10 @@ const tierThreeDays = 20;
 
 //Starting the initial prompts to obtain information.
 
-var name = prompt("Hello, welcome to the PTO Calculator. To begin, please provide your first name")
-var ratePerHour = Number(prompt("Thanks "+name+", next we will need your dollar per hour rate"))
-var hoursPerWeek = Number(prompt("How many hours do you work per week?"))
-var employeeTenure = Number(prompt("Lastly, we will need to know how long have you been with the company?(Please round up to the nearest year)"))
+var name = prompt("Hello, welcome to the PTO Calculator. To begin, please provide your first name");
+var ratePerHour = Number(prompt("Thanks "+name+", next we will need your dollar per hour rate"));
+var hoursPerWeek = Number(prompt("How many hours do you work per week?"));
+var employeeTenure = Number(prompt("Lastly, we will need to know how long have you been with the company?(Please round up to the nearest year)"));
 
 //This is the required Ternary condition for the assignment.
 var nextStep = (ratePerHour > 0) ? 1:2
@@ -60,7 +61,11 @@ var nextStep = (ratePerHour > 0) ? 1:2
 if (nextStep === 1){
 	if (employeeTenure < 3){
 		var accrualRate = calcAnnualAccrualRate(tierOne,hoursPerWeek);
-		console.log(accrualRate);
+		var accrualTotalHours = calcAnnualHours(accrualRate,hoursPerWeek);
+		var accrualPerWeek = calcAccrHoursPerWeek(accrualRate,hoursPerWeek);
+		var accrualDollarAmount = calcHoursValue(accrualTotalHours,ratePerHour);
+		
+		alert(name+" you will earn a total of "+tierOne+" days of PTO. This means that you have an accrual rate of "+accrualRate+" per hour worked. With you working "+hoursPerWeek+" hours per week, you will earn "+accrualPerWeek+" hours per week in accruals. This totals up to a PTO Balance cash value of $"+accrualDollarAmount+" dollars annually.")
 		
 	}else if(employeeTenure >= 3 && employeeTenure < 10){
 		
