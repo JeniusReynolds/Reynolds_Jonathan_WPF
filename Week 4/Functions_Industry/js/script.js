@@ -64,18 +64,42 @@ if (nextStep === 1){
 		var accrualRate = calcAnnualAccrualRate(tierOne,hoursPerWeek);
 		var accrualTotalHours = calcAnnualHours(accrualRate,hoursPerWeek);
 		var accrualPerWeek = calcAccrHoursPerWeek(accrualRate,hoursPerWeek);
+		var accrualWeeklyDollarAmount = calcHoursValue(accrualPerWeek,ratePerHour)
 		var accrualDollarAmount = calcHoursValue(accrualTotalHours,ratePerHour);
 		
 		accrualRate = +accrualRate.toFixed(4);
 		accrualPerWeek = +accrualPerWeek.toFixed(4);
+		accrualWeeklyDollarAmount = +accrualWeeklyDollarAmount.toFixed(2);
 		accrualDollarAmount = +accrualDollarAmount.toFixed(2);
 		
-		alert(name+", you will earn a total of "+tierOne+" days of PTO. This means that you have an approximate accrual rate of "+accrualRate+" per hour worked. With you working "+hoursPerWeek+" hours per week, you will approximately earn "+accrualPerWeek+" hours per week in accruals. This will provide you an annual PTO dollar value of $"+accrualDollarAmount+" dollars annually.")
+		alert(name+", you will earn a total of "+tierOne+" days of PTO. This means that you have an approximate accrual rate of "+accrualRate+" per hour worked. With you working "+hoursPerWeek+" hours per week, you will approximately earn "+accrualPerWeek+" hours per week in accruals($"+accrualWeeklyDollarAmount+" a week). This will provide you an annual PTO dollar value of $"+accrualDollarAmount+" dollars.")
 		
 	}else if(employeeTenure >= 3 && employeeTenure < 10){
+		var accrualRate = calcAnnualAccrualRate(tierTwo,hoursPerWeek);
+		var accrualTotalHours = calcAnnualHours(accrualRate,hoursPerWeek);
+		var accrualPerWeek = calcAccrHoursPerWeek(accrualRate,hoursPerWeek);
+		var accrualWeeklyDollarAmount = calcHoursValue(accrualPerWeek,ratePerHour)
+		var accrualDollarAmount = calcHoursValue(accrualTotalHours,ratePerHour);
 		
+		accrualRate = +accrualRate.toFixed(4);
+		accrualPerWeek = +accrualPerWeek.toFixed(4);
+		accrualWeeklyDollarAmount = +accrualWeeklyDollarAmount.toFixed(2);
+		accrualDollarAmount = +accrualDollarAmount.toFixed(2);
+		
+		alert(name+", you will earn a total of "+tierTwo+" days of PTO. This means that you have an approximate accrual rate of "+accrualRate+" per hour worked. With you working "+hoursPerWeek+" hours per week, you will approximately earn "+accrualPerWeek+" hours per week in accruals($"+accrualWeeklyDollarAmount+" a week). This will provide you an annual PTO dollar value of $"+accrualDollarAmount+" dollars.")
 	}else{
+		var accrualRate = calcAnnualAccrualRate(tierThree,hoursPerWeek);
+		var accrualTotalHours = calcAnnualHours(accrualRate,hoursPerWeek);
+		var accrualPerWeek = calcAccrHoursPerWeek(accrualRate,hoursPerWeek);
+		var accrualWeeklyDollarAmount = calcHoursValue(accrualPerWeek,ratePerHour)
+		var accrualDollarAmount = calcHoursValue(accrualTotalHours,ratePerHour);
 		
+		accrualRate = +accrualRate.toFixed(4);
+		accrualPerWeek = +accrualPerWeek.toFixed(4);
+		accrualWeeklyDollarAmount = +accrualWeeklyDollarAmount.toFixed(2);
+		accrualDollarAmount = +accrualDollarAmount.toFixed(2);
+		
+		alert(name+", you will earn a total of "+tierThree+" days of PTO. This means that you have an approximate accrual rate of "+accrualRate+" per hour worked. With you working "+hoursPerWeek+" hours per week, you will approximately earn "+accrualPerWeek+" hours per week in accruals($"+accrualWeeklyDollarAmount+" a week). This will provide you an annual PTO dollar value of $"+accrualDollarAmount+" dollars.")
 	}
 	
 }else{
