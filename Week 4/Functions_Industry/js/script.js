@@ -47,7 +47,7 @@ function calcAccrHoursPerWeek(rate,hoursPWeek)
 
 const tierOne = 5;
 const tierTwo = 10;
-const tierThreeDays = 20;
+const tierThree = 20;
 
 //Starting the initial prompts to obtain information.
 
@@ -59,6 +59,7 @@ var employeeTenure = Number(prompt("Lastly, we will need to know how long have y
 //This is the required Ternary condition for the assignment.
 var nextStep = (ratePerHour > 0) ? 1:2
 
+//This is the required If + Else If + Else requirement for the course.
 if (nextStep === 1){
 	if (employeeTenure < 3){
 		var accrualRate = calcAnnualAccrualRate(tierOne,hoursPerWeek);
@@ -74,6 +75,8 @@ if (nextStep === 1){
 		
 		alert(name+", you will earn a total of "+tierOne+" days of PTO. This means that you have an approximate accrual rate of "+accrualRate+" per hour worked. With you working "+hoursPerWeek+" hours per week, you will approximately earn "+accrualPerWeek+" hours per week in accruals($"+accrualWeeklyDollarAmount+" a week). This will provide you an annual PTO dollar value of $"+accrualDollarAmount+" dollars.")
 		
+		console.log(name+", you will earn a total of "+tierOne+" days of PTO. This means that you have an approximate accrual rate of "+accrualRate+" per hour worked. With you working "+hoursPerWeek+" hours per week, you will approximately earn "+accrualPerWeek+" hours per week in accruals($"+accrualWeeklyDollarAmount+" a week). This will provide you an annual PTO dollar value of $"+accrualDollarAmount+" dollars.")
+		
 	}else if(employeeTenure >= 3 && employeeTenure < 10){
 		var accrualRate = calcAnnualAccrualRate(tierTwo,hoursPerWeek);
 		var accrualTotalHours = calcAnnualHours(accrualRate,hoursPerWeek);
@@ -87,6 +90,8 @@ if (nextStep === 1){
 		accrualDollarAmount = +accrualDollarAmount.toFixed(2);
 		
 		alert(name+", you will earn a total of "+tierTwo+" days of PTO. This means that you have an approximate accrual rate of "+accrualRate+" per hour worked. With you working "+hoursPerWeek+" hours per week, you will approximately earn "+accrualPerWeek+" hours per week in accruals($"+accrualWeeklyDollarAmount+" a week). This will provide you an annual PTO dollar value of $"+accrualDollarAmount+" dollars.")
+		
+		console.log(name+", you will earn a total of "+tierTwo+" days of PTO. This means that you have an approximate accrual rate of "+accrualRate+" per hour worked. With you working "+hoursPerWeek+" hours per week, you will approximately earn "+accrualPerWeek+" hours per week in accruals($"+accrualWeeklyDollarAmount+" a week). This will provide you an annual PTO dollar value of $"+accrualDollarAmount+" dollars.")
 	}else{
 		var accrualRate = calcAnnualAccrualRate(tierThree,hoursPerWeek);
 		var accrualTotalHours = calcAnnualHours(accrualRate,hoursPerWeek);
@@ -100,8 +105,11 @@ if (nextStep === 1){
 		accrualDollarAmount = +accrualDollarAmount.toFixed(2);
 		
 		alert(name+", you will earn a total of "+tierThree+" days of PTO. This means that you have an approximate accrual rate of "+accrualRate+" per hour worked. With you working "+hoursPerWeek+" hours per week, you will approximately earn "+accrualPerWeek+" hours per week in accruals($"+accrualWeeklyDollarAmount+" a week). This will provide you an annual PTO dollar value of $"+accrualDollarAmount+" dollars.")
+		
+		console.log(name+", you will earn a total of "+tierThree+" days of PTO. This means that you have an approximate accrual rate of "+accrualRate+" per hour worked. With you working "+hoursPerWeek+" hours per week, you will approximately earn "+accrualPerWeek+" hours per week in accruals($"+accrualWeeklyDollarAmount+" a week). This will provide you an annual PTO dollar value of $"+accrualDollarAmount+" dollars.")
 	}
 	
 }else{
 	alert("Hi "+name+", please provide a valid Dollar Per Hour Rate. Thank you.")
+	console.log("Hi "+name+", please provide a valid Dollar Per Hour Rate. Thank you.")
 }
