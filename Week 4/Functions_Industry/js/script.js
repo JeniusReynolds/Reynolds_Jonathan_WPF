@@ -18,6 +18,7 @@ function calcHoursValue (hours,rate)
 
 function calcAnnualHours (pRate, hoursPWeek)
 {//will calculate the accrual hours earned for the year
+	var weeksInAYear = 52;
 	var totalAnnualWorkHours = hoursPWeek * weeksInAYear;
 	var annualHours = pRate * totalAnnualWorkHours;
 	return annualHours
@@ -65,7 +66,11 @@ if (nextStep === 1){
 		var accrualPerWeek = calcAccrHoursPerWeek(accrualRate,hoursPerWeek);
 		var accrualDollarAmount = calcHoursValue(accrualTotalHours,ratePerHour);
 		
-		alert(name+" you will earn a total of "+tierOne+" days of PTO. This means that you have an accrual rate of "+accrualRate+" per hour worked. With you working "+hoursPerWeek+" hours per week, you will earn "+accrualPerWeek+" hours per week in accruals. This totals up to a PTO Balance cash value of $"+accrualDollarAmount+" dollars annually.")
+		accrualRate = +accrualRate.toFixed(4);
+		accrualPerWeek = +accrualPerWeek.toFixed(4);
+		accrualDollarAmount = +accrualDollarAmount.toFixed(2);
+		
+		alert(name+", you will earn a total of "+tierOne+" days of PTO. This means that you have an approximate accrual rate of "+accrualRate+" per hour worked. With you working "+hoursPerWeek+" hours per week, you will approximately earn "+accrualPerWeek+" hours per week in accruals. This will provide you an annual PTO dollar value of $"+accrualDollarAmount+" dollars annually.")
 		
 	}else if(employeeTenure >= 3 && employeeTenure < 10){
 		
