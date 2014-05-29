@@ -7,11 +7,34 @@
  */
 
 
-//I will be using an anonymous function to make the calculation for the car payment. I was able to obtain the formula for car payment from http://www.calcunation.com/calculators/business%20and%20finance/vehicle-payment.php. In order to make the formula work I had to investigate how to do the Power of in Javascript. I was able to find the answer via http://www.w3schools.com/jsref/jsref_pow.asp
+//I will be using an anonymous function to make the calculation for the car payment. I was able to obtain the formula for car payment from http://www.calcunation.com/calculators/business%20and%20finance/vehicle-payment.php. In order to make the formula work I had to investigate how to do the Power of in Javascript. I was able to find the answer via http://www.w3schools.com/jsref/jsref_pow.asp After trial and error I found that the best way to calculate a negative power is to do the math inverse of the power and make it 1 over the positive power. THat is why the Math.pow is setup like it is now.
 
 
 //This variable will meet the requirements for an Anonymous function as well as a function requiring 3 parameters.
 
 var carPayment = function(rate,principal,months){
-	var payment = (rate * principal) / 1 - (Math.pow((1+r),(-1*months)))
+	var payment = (rate * principal) / (1 - (Math.pow(1/(1 + rate), months)))
+	return payment
 }
+
+//This function will be used to calculate the rate which is (apr/100)/12
+
+function calcRate(apr){
+	var rate = (apr/100)/12
+	return rate
+}
+
+//This function will be used to calculate principal
+
+function calcPrincipal(carCost,trade,downPayment){
+	var principal = carCost - (trade + downPayment)
+	return principal
+}
+
+//Starting the prompts to obtain all of the information needed
+
+var name = prompt("Hello, Welcome to the Car Loan Calculator. Please enter your First Name.")
+var carCost = prompt("Thanks "+name+", How much is the car that you are looking to purchase?")
+var tradeIn = Number(prompt("Do you plan on trading in a car? If so, what is the estimated value of that Car?" 0))
+var downPayment = Number(prompt("How much of a Down payment do you plan on making on this vehicle?" 2000))
+var apr = Number(prompt("What is the expected Annual Percentage Rate you expect to recieve?"))
