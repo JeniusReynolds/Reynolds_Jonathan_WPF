@@ -38,3 +38,13 @@ var carCost = prompt("Thanks "+name+", How much is the car that you are looking 
 var tradeIn = Number(prompt("Do you plan on trading in a car? If so, what is the estimated value of that Car?" 0))
 var downPayment = Number(prompt("How much of a Down payment do you plan on making on this vehicle?" 2000))
 var apr = Number(prompt("What is the expected Annual Percentage Rate you expect to recieve?"))
+var length = Number(prompt("How many months do you plan on financing for?"))
+
+//Calculations that are needed to take place
+
+var rawRate = calcRate(apr)
+var rawPrincipal = calcPrincipal(carCost,tradeIn,downPaymen)
+
+carPayment(rawRate,rawPrincipal,length)
+
+console.log(carPayment)
