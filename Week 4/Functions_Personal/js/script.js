@@ -35,16 +35,19 @@ function calcPrincipal(carCost,trade,downPayment){
 
 var name = prompt("Hello, Welcome to the Car Loan Calculator. Please enter your First Name.")
 var carCost = prompt("Thanks "+name+", How much is the car that you are looking to purchase?")
-var tradeIn = Number(prompt("Do you plan on trading in a car? If so, what is the estimated value of that Car?" 0))
-var downPayment = Number(prompt("How much of a Down payment do you plan on making on this vehicle?" 2000))
+var tradeIn = Number(prompt("Do you plan on trading in a car? If so, what is the estimated value of that Car?", 0))
+var downPayment = Number(prompt("How much of a Down payment do you plan on making on this vehicle?", 2000))
 var apr = Number(prompt("What is the expected Annual Percentage Rate you expect to recieve?"))
 var length = Number(prompt("How many months do you plan on financing for?"))
 
 //Calculations that are needed to take place
 
 var rawRate = calcRate(apr)
-var rawPrincipal = calcPrincipal(carCost,tradeIn,downPaymen)
+var rawPrincipal = calcPrincipal(carCost,tradeIn,downPayment)
 
-carPayment(rawRate,rawPrincipal,length)
+var finalCost = carPayment(rawRate,rawPrincipal,length)
+finalCost = +finalCost.toFixed(2)
 
-console.log(carPayment)
+alert("Your estimated monthly payment for your vehicle will be $"+finalCost+". Thanks for using!")
+console.log("Your estimated monthly payment for your vehicle will be $"+finalCost+". Thanks for using!")
+
