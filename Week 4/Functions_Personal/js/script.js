@@ -31,9 +31,15 @@ function calcPrincipal(carCost,trade,downPayment){
 	return principal
 }
 
+//This function will calculate the cost of the car plus tax
+function calcPrice(carCost){
+	var carWithTax = carCost * 1.065 //6.5% Sales Tax
+	return carWithTax
+}
+
 //Starting the prompts to obtain all of the information needed
 
-var name = prompt("Hello, Welcome to the Car Loan Calculator. Please enter your First Name.")
+var name = prompt("Hello, Welcome to the Car Loan Payment Estimator. Please enter your First Name.")
 var carCost = prompt("Thanks "+name+", How much is the car that you are looking to purchase?")
 var tradeIn = Number(prompt("Do you plan on trading in a car? If so, what is the estimated value of that Car?", 0))
 var downPayment = Number(prompt("How much of a Down payment do you plan on making on this vehicle?", 2000))
@@ -42,8 +48,10 @@ var length = Number(prompt("How many months do you plan on financing for?"))
 
 //Calculations that are needed to take place
 
+var rawCost = calcPrice(carCost)
+
 var rawRate = calcRate(apr)
-var rawPrincipal = calcPrincipal(carCost,tradeIn,downPayment)
+var rawPrincipal = calcPrincipal(rawCost,tradeIn,downPayment)
 
 var finalCost = carPayment(rawRate,rawPrincipal,length)
 finalCost = +finalCost.toFixed(2)
