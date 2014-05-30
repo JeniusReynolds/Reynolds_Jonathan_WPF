@@ -26,8 +26,16 @@ function totalCalc (newPrice,tax){
 
 //Adding prompts to obtain information from user
 
-var name = prompt("Hello, welcome to the discount price calculator. To begin please provide your first name")
-var totalPrice = Number(prompt("Thanks "+name+". What is the total price for the item(s)?"))
+var name = prompt("Hello, welcome to the Discount Price Calculator. To begin, please provide your first name.")
+var totalPrice = Number(prompt("Thanks "+name+". What is the total price for the item(s)? $"))
 var discount = Number(prompt("What is the discount percentage that you are expecting to receive?"))
 
 //Calculations to process information
+
+var decimalPercentage = percentageCalc(discount);
+var priceAfterDiscount = discountCalc(totalPrice,decimalPercentage)
+var finalPrice = totalCalc(priceAfterDiscount,salesTax)
+
+finalPrice = +finalPrice.toFixed(2)
+
+alert(name+" your total price after discount and 6.5% sales tax is going to be $"+finalPrice)
