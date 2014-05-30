@@ -23,3 +23,11 @@ function totalCalc (newPrice,tax){
 	var itemTotal = newPrice * (1+tax)
 	return itemTotal
 }
+
+//Adding prompts to obtain information from user
+
+var name = prompt("Hello, welcome to the discount price calculator. To begin please provide your first name")
+var totalPrice = Number(prompt("Thanks "+name+". What is the total price for the item(s)?"))
+var discount = Number(prompt("What is the discount percentage that you are expecting to receive?"))
+
+//Calculations to process information
